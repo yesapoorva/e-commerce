@@ -72,9 +72,9 @@ const searchProducts = async (req, res) => {
             ]
         });
 
-        // if (products.length === 0) {
-        //     return res.status(404).json({ message: 'No products found matching the search query' });
-        // }
+        if (products.length === 0) {
+            return res.status(404).json({ message: 'No products found matching the search query' });
+        }
 
         res.json(products);
     } catch (err) {
