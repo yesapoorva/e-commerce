@@ -56,4 +56,30 @@ const deleteProduct = async (req, res) => {
     }
 }
 
-module.exports = {createProduct, getProducts, updateProduct, deleteProduct};
+const searchProducts = async (req, res) => {
+    const { query } = req.query;
+
+    if (!query) {
+        return res.status(400).json({ message: 'Please provide a search query' });
+    }
+
+    try {
+        const products = await Product.find({
+            $or: [
+                { name: { $regex: query, $options: 'i' } }, 
+                { description: { $regex: query, $options: 'i' } },
+                { 'variants.name': { $regex: query, $options: 'i' } }
+            ]
+        });
+
+        if (products.length === 0) {
+            return res.status(404).json({ message: 'No products found matching the search query' });
+        }
+
+        res.json(products);
+    } catch (err) {
+        res.status(500).json({ message: err.message });
+    }
+}
+
+module.exports = {createProduct, getProducts, updateProduct, deleteProduct, searchProducts};
