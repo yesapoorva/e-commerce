@@ -1,0 +1,169 @@
+{
+	"info": {
+		"_postman_id": "7cd26a89-3627-4588-a08d-ccfcca537bbe",
+		"name": "mirrAR-Ecommerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30136741"
+	},
+	"item": [
+		{
+			"name": "Get All Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://apoorvasecommerce.onrender.com/api/products/getAll",
+					"protocol": "https",
+					"host": [
+						"apoorvasecommerce",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"products",
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get One by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://apoorvasecommerce.onrender.com/api/products/getOne/65be36bafbf11b4468a8632c",
+					"protocol": "https",
+					"host": [
+						"apoorvasecommerce",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"products",
+						"getOne",
+						"65be36bafbf11b4468a8632c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Pixel 7a\",\r\n    \"description\": \"Google's flagship phone\",\r\n    \"price\": 60000,\r\n    \"variants\": [\r\n        {\r\n            \"name\": \"Variant 1\",\r\n            \"SKU\": \"SKU123\",\r\n            \"additionalCost\": 10,\r\n            \"stockCount\": 50\r\n        },\r\n        {\r\n            \"name\": \"Variant 2\",\r\n            \"SKU\": \"SKU124\",\r\n            \"additionalCost\": 40,\r\n            \"stockCount\": 5\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://apoorvasecommerce.onrender.com/api/products/create",
+					"protocol": "https",
+					"host": [
+						"apoorvasecommerce",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"products",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update product",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Pixel 8 pro\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://apoorvasecommerce.onrender.com/api/products/update/65bf0c58160e3f40a86f9776",
+					"protocol": "https",
+					"host": [
+						"apoorvasecommerce",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"products",
+						"update",
+						"65bf0c58160e3f40a86f9776"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete Product by ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://apoorvasecommerce.onrender.com/api/products/delete/65be374ef2380b0fab033b74",
+					"protocol": "https",
+					"host": [
+						"apoorvasecommerce",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"products",
+						"delete",
+						"65be374ef2380b0fab033b74"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://apoorvasecommerce.onrender.com/api/products/search?query=Google",
+					"protocol": "https",
+					"host": [
+						"apoorvasecommerce",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"api",
+						"products",
+						"search"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "Google"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
