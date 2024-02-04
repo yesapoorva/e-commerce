@@ -6,7 +6,7 @@ This is a RESTful API for managing products for an e-commerce system. It allows 
 
 You can find the Postman collection for this project [here](https://github.com/yesapoorva/e-commerce/blob/main/mirrAR-Ecommerce.postman_collection.json).
 
-### Installation
+## Installation
 
 Clone this repository to your local machine: 
 git clone https://github.com/yesapoorva/e-commerce.git
@@ -25,14 +25,14 @@ PORT=6080
 MONGO_URI=your-mongodb-connection-string
 Replace your-mongodb-connection-string with your MongoDB connection string.
 
-#### Usage
+## Usage
 
 Start the server: 
 npm start
 
 The server will be running at http://localhost:6000 by default.
 
-#### Endpoints
+## Endpoints
 
 POST /api/products/create: 
 Create a new product.
@@ -52,12 +52,12 @@ Update a product by ID.
 DELETE /api/products/delete/:id: 
 Delete a product by ID.
 
-#### Testing
+## Testing
 
 To run tests, use the following command: 
 npm test
 
-#### Architecture
+## Architecture
 The project follows a Express.js architecture with the following components:
 
 Routes: 
@@ -75,7 +75,7 @@ Implement middleware functions for request processing.
 Tests: 
 Use Jest and Supertest for testing route endpoints and model functionality.
 
-#### Deployed API Links:
+## Deployed API Links:
 
 GET: https://apoorvasecommerce.onrender.com/api/products/getAll
 
